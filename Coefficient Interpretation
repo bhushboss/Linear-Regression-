@@ -1,0 +1,21 @@
+Coefficient Interpretation
+Here are the coefficients that the model learned.
+They tell us how each feature affects the price
+Feature Coefficient (Impact)
+area 2,710,364
+bathrooms 2,204,008
+stories 1,253,356
+hotwaterheating 980,171
+airconditioning 772,475
+parking 701,493
+prefarea 686,392
+mainroad 582,599
+bedrooms 539,784
+guestroom 351,446
+basement 249,421
+semi-furnished 10,632
+unfurnished -
+
+Interpreting Categorical Features: Since features like airconditioning were not scaled, their coefficients are directly interpretable. For example, a house with air conditioning is associated with a price increase of \approx \$772,475 compared to one without, holding all other features constant.
+Interpreting Scaled Features: Features like area, bathrooms, and stories were scaled, so their coefficients reflect the impact of a "scaled unit change." We can still use their magnitude to see that area is the single most important positive driver of price, followed by bathrooms and stories.
+Negative Impact: An unfurnished house is associated with a price decrease of \approx \$358,115 compared to the baseline 'furnished' category.
