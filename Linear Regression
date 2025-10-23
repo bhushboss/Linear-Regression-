@@ -1,0 +1,27 @@
+1.Simple Linear Regression (Price vs. Area)
+First, I built a simple model using only the area to predict the price.
+Model Evaluation.
+R-squared (R^2): 0.2952
+Mean Absolute Error (MAE): \$1,244,367.67
+Model Equation: Price = 2,353,148 + 470 \times Area
+The R^2 value is quite low, indicating that the area alone only explains about 29.5\% of the variation in house prices. This suggests we need more features for a good model.
+Regression Plot
+Here you can see the actual data points scattered, with the red line representing the model's price predictions. As the R^2 suggested, the points are very spread out from the line.
+2. Multiple Linear Regression 
+Next, I implemented the full multiple linear regression model. This involved:
+Preprocessing: Converting all 'yes'/'no' columns to 1/0 and creating dummy variables for furnishingstatus.
+Scaling: Applying MinMaxScaler to numerical features like area, bedrooms, and bathrooms to ensure they are on a comparable scale.
+Fitting: Training the model on all 12 features.
+Model Evaluation.
+This model is a significant improvement:
+Test R-squared (R^2): 0.6730
+Train R-squared (R^2): 0.6815
+Mean Absolute Error (MAE): \$835,899.47
+An R^2 of 67.3\% means the model explains a much larger portion of the price variance. The close alignment between the test and train R^2 values is excellent, as it shows the model is not overfitting and generalizes well to new data.
+Visualization: 
+Actual vs.
+Predicted Prices
+Residual
+Distribution:
+This plot shows the model's predicted prices (y-axis) against the actual prices (x-axis). The points are clustered much more tightly around the red 'Perfect Prediction' line, visually confirming the higher R² score.
+This histogram shows the model's errors (Actual Price Predicted Price). A healthy model has its errors centered around zero, which we see here.
